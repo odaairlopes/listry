@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: listry
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: ./node_modules/.bin/next start --hostname 0.0.0.0 --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
