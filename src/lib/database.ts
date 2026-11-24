@@ -53,6 +53,8 @@ async function connect() {
   try {
     if (!remote) await db.execute("PRAGMA journal_mode=WAL");
     await db.executeMultiple(schema);
+    // Only older local installations shipped the demo books tracked by user_version.
+    if (remote) return db;
     const tx = await db.transaction("write");
     try {
       const version = await tx.execute("PRAGMA user_version");
