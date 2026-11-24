@@ -36,7 +36,7 @@ let connection: Promise<Client> | undefined;
 async function connect() {
   const url = process.env.TURSO_DATABASE_URL;
   const authToken = process.env.TURSO_AUTH_TOKEN;
-  const remote = Boolean(url || authToken || process.env.RENDER);
+  const remote = Boolean(url || authToken || process.env.RENDER || process.env.VERCEL);
   let db: Client;
   if (remote) {
     if (!url || !authToken || !/^(libsql|https):\/\//.test(url)) {

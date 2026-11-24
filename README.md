@@ -1,8 +1,10 @@
 # Listry
 
-Aplicativo de leitura em português, desenvolvido com Next.js App Router, React e TypeScript estrito. A coleção começa vazia. O painel mostra somente atividades iniciadas pelo leitor. Você pode adicionar títulos próprios ou do catálogo, registrar a página atual, concluir leituras e marcar favoritos.
+O Listry é um diário cultural para guardar o que você quer ler ou assistir e registrar o que achou de cada obra.
 
-Visitantes podem explorar o catálogo. Para salvar um livro ou filme, crie uma conta e entre. Em **Adicionar à coleção**, escolha o formato, procure a obra ou use o cadastro manual. O servidor verifica a sessão em cada alteração da coleção.
+Explore o catálogo ou crie uma conta para montar sua coleção de livros e filmes. Você pode retomar uma leitura pela página em que parou, marcar um filme como assistido e escrever críticas com nota sobre livros, filmes, séries e animes.
+
+[Abrir o Listry](https://listry.onrender.com)
 
 ## Executar
 
@@ -37,6 +39,8 @@ Para as verificações automáticas, execute `npm test`, `npm run lint`, `npm ru
 
 ## Estrutura do projeto
 
+Desenvolvido com Next.js App Router, React e TypeScript estrito.
+
 - `src/app` contém as rotas, metadados, estados de carregamento e erro e as Server Actions.
 - `src/components` reúne o painel, a coleção, os formulários e a navegação.
 - `src/lib/books.ts` define o catálogo editorial e os tipos de domínio.
@@ -57,6 +61,10 @@ Para escolher outro diretório, configure `ESTANTE_DATA_DIR` em `.env.local` com
 Para copiar ou mover uma instalação, encerre o servidor antes de copiar o diretório de dados inteiro, incluindo eventuais arquivos WAL. Hospedagem com disco efêmero exige um volume persistente ou outro banco.
 
 Consulte as próximas etapas no [roadmap do Listry](ROADMAP.md).
+
+## Publicar na Vercel com Turso
+
+Importe o repositório na Vercel, escolha o plano Hobby e mantenha o preset Next.js. Em **Environment Variables**, configure `TURSO_DATABASE_URL` e `TURSO_AUTH_TOKEN` no ambiente **Production** antes do deploy. Ao migrar uma instalação existente, use o mesmo banco Turso para preservar contas, coleções e críticas. Para testar alterações em Preview, use um banco separado.
 
 ## Publicar gratuitamente com Render e Turso
 
