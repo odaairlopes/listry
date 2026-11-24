@@ -4,7 +4,7 @@ O Listry é um diário cultural para guardar o que você quer ler ou assistir e 
 
 Explore o catálogo ou crie uma conta para montar sua coleção de livros e filmes. Você pode retomar uma leitura pela página em que parou, marcar um filme como assistido e escrever críticas com nota sobre livros, filmes, séries e animes.
 
-[Abrir o Listry](https://listry.onrender.com)
+[Abrir o Listry](https://listry-alpha.vercel.app)
 
 ## Executar
 
